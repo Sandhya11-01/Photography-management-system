@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('./jakob-owens-azZtU531psM-unsplash.jpg') ;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            backdrop-filter: blur(5px) brightness(80%);
+            
+            position:absolute;
+            padding: 120px;
+            left : 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container2 {
+            backdrop-filter: blur(5px) brightness(80%);
+            position:absolute;
+            padding: 120px;
+            left : 550px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container3 {
+            backdrop-filter: blur(5px) brightness(80%);
+            position:absolute;
+            padding: 120px;
+            left : 1000px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn-container button {
+            padding: 20px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ae0000;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-container button:hover {
+            background-color: #ae0000;
+        }
+        .left-corner-button {
+             position: fixed; 
+            top: 20px; 
+            left: 20px; 
+            padding: 10px 20px; 
+             background-color: #ffffff; 
+             color: #000000; 
+             border: none; 
+             border-radius: 5px; 
+             cursor: pointer; 
+             font-size: 16px; 
+        }
+        .left-corner-button:hover {
+            background-color: #ffffff; 
+        }
+    </style>
+    
+</head>
+<body>
+    <button class="left-corner-button" id="btn4" >Back</button>
+    <div class="form-container">
+        
+        <form action="#">
+            <div class="form-group">
+                
+                <div class="btn-container">
+                    <button type="button"  id="btn1">VIEW USERS</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <div class="form-container2">
+        
+        <form action="#">
+            <div class="form-group">
+                <div class="btn-container">
+                    <button type="button"  id="btn2">DELETE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="form-container3"> 
+        <form action="#">
+            <div class="form-group">
+                <div class="btn-container">
+                    <button type="button"  id="btn3">VIEW BOOKING DETAILS</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById('btn2').onclick = function(){
+                window.location.href='delete.html';
+            };
+            document.getElementById('btn1').onclick = function(){
+                window.location.href='/findall';
+            };
+            document.getElementById('btn3').onclick = function(){
+                window.location.href='/viewbook';
+            };
+            document.getElementById('btn4').onclick = function(){
+                window.location.href='home.html';
+            };
+      
+    });
+    </script>
+</body>
+</html>

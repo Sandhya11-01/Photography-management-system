@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items</title>
+    <style>
+        /* Define your CSS styles here */
+        body {
+            
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background: url("./img/freestocks-A11MXTzUhLE-unsplash.jpg") no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+        button {
+    width: 10%;
+    padding: 10px 20px;
+    margin-right: 30px;
+    background-color: #717e8c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    </style>
+</head>
+<script>
+
+    function goToViewPage() {
+        window.location.assign("admin.html"); 
+        }
+</script>
+<body>
+    <button class="btn btn-primary"  onclick="goToViewPage()">Back</button>
+
+  <form id="view_user" action="/finduser" method="GET">
+    <h1>USERS</h1>
+     
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>MobileNo</th>
+		        <th>Password</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+            <tr>
+                <td>{{this.username}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td>
+		        <td>{{this.password}}</td>
+            </tr>
+            {{/each}}
+    
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

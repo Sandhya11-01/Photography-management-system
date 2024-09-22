@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bstyle.css">
+    <title>Video-2</title>
+</head>
+
+
+<body class="main_bg">
+    <div class="form-group">
+        <div class="btn-container">
+            <button type="button"  id="btn4">VIEW BOOKED SLOT</button>
+        </div>
+        </div>
+    <div class="form">
+        <div class="form-text">
+            <h1><span><img src="art-1.png" alt=""></span><span><img src="art-1.png" alt=""></span></h1>
+        </div>
+        <div class="main-form">
+            <form action="binsert" id="booking" method="GET">
+                
+                <div>
+                    <span>Full name</span>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <span>Email address </span>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required> 
+                </div>
+                <div>
+                    <!-- <---this is the select option--->
+                    <span>Event Type</span>
+                    <select name="event" id="event" placeholder="Choose event" required>
+                        
+                        <option value="Birthday">Birthday</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Commercial events">Commercial Events</option>
+                        <option value="Babies & kids">Babies & Kids</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <!-- <---this is the select option--->
+                </div>
+                <div>
+                    <span>Time</span>
+                    <input type="text" name="time" id="time" placeholder="Time" required>
+                </div>
+                <div>
+                    <span>Date</span>
+                    <input type="date" name="date" id="date" placeholder="date" required>
+                </div>
+                <div>
+                    <span>Contact number</span>
+                    <input type="text" name="number" id="number" placeholder="Enter your number" required>
+                </div>
+                <div>
+                    <!-- <---this is the select option--->
+                    <span>Photographer name</span>
+                    <select name="pname" id="pname" placeholder="Choose event" required>
+                        
+                        <option value="Andrews">Andrews</option>
+                        <option value="John">John</option>
+                        <option value="Abi">Abi</option>
+                        <option value="Stephen">Stephen</option>
+                    </select>
+                    <!-- <---this is the select option--->
+                </div>
+                <div id="submit">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <button class="left-corner-button" id= "btn3" >Back</button>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById('btn4').onclick = function(){
+                window.location.href='/viewslot';
+            };
+            document.getElementById('btn3').onclick = function(){
+                window.location.href='main.html';
+            };
+            document.getElementById('submit').onclick = function(){
+                window.location.href='slip.html';
+            };   
+});
+</script>
+</body>
+
+</html>
